@@ -1,0 +1,35 @@
+/* modal-solicitacao.component.scss */
+
+    .buttonComp{
+        width: 100%;
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      .buttonComp2{
+        width: 100%;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      ion-button{
+        height: 50px;
+        width: 90%;
+      }
+      .buttonComp2.ion-button{
+        height: 50px;
+        width: 100%;
+      }
+  
+  
+  ion-list {
+    width: 100%; /* Defina a largura do conteúdo interno */
+  }
+  /* Estilo personalizado para o ion-header */
+
+  

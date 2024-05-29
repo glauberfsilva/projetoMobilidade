@@ -1,0 +1,137 @@
+.map{
+    width:100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    
+  }
+  
+  .ion-margin-horizontal{
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 100;
+  }
+  
+  .ion-label{
+    margin-right: 150px;
+  }
+  
+  .ion-margin-horizontal2{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 100;
+  }
+  
+  ion-searchbar{
+    --border-radius: 30px !important;
+    }
+    
+    .titulohead{
+      margin-left: 60px;
+    }
+  
+  
+  .areaTexto1{
+    z-index: 50;
+    position: fixed;
+    margin-top: 70px;
+    
+  }
+  
+  
+  .ion-menu{
+  z-index: 1;
+  }
+  
+  
+  .areaTexto2{
+    z-index: 2;
+    position: absolute;
+    margin-top: 120px;
+  }
+  
+  
+  .request-car{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+  
+  
+  .imagemCars {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto -15px auto;
+  
+  }
+  
+  span{
+    display: block;
+  }
+  
+  ion-grid{
+    span{
+      font-size: 14px;
+      margin-bottom: 4%;
+  
+      &.category {
+        color: #fff;
+        background-color: #333;
+        margin-top: 0px;
+        padding: 3px 5px;
+        border-radius: bold;
+        display: inline-block;
+      }
+    }
+  }
+  }
+  
+  .request-car2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+  
+  
+  .imagemCars {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto -15px auto;
+  
+  }
+  
+  span{
+    display: block;
+  }
+  
+  ion-grid{
+    span{
+      font-size: 14px;
+      margin-bottom: 4%;
+  
+      &.category {
+        color: #fff;
+        background-color: #333;
+        margin-top: 0px;
+        padding: 3px 5px;
+        border-radius: bold;
+        display: inline-block;
+      }
+    }
+  }
+  }
+
+/* motorista.page.scss */
+

@@ -1,0 +1,118 @@
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="titulohead">Passageiro</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-searchbar class="areaTexto1" [(ngModel)]="sourceLocation" searchIcon="location-outline" (ionInput)="searchChanged()" placeholder="Localização"></ion-searchbar>
+       
+    <ion-list  class="ion-margin-horizontal2" *ngIf="searchResults != null">
+     <ion-item (click)="calcRoute(result)" *ngFor="let result of searchResults">
+       {{result.description}}
+     </ion-item>
+   </ion-list>
+
+    <ion-searchbar class="custom-icon icon-edit" searchIcon="navigate-outline" [(ngModel)]="destinationLocation"  (ionInput)="searchChanged2()" placeholder="Destino" class="areaTexto2"></ion-searchbar>
+  
+    <ion-list class="ion-margin-horizontal"  *ngIf="searchResults2 != null">
+      <ion-item (click)="calcRoute2(result)" *ngFor="let result of searchResults2">
+        {{result.description}}
+      </ion-item>
+    </ion-list>
+
+  
+
+    <ion-footer>
+      
+   <ion-button expand="full" color="dark" size="large" 
+   class="botao1" (click)="calculateAndDisplayRoute()" *ngIf="esconDer">Buscar Rota</ion-button>
+    
+   <div class="request-car ion-padding ion-text-center" *ngIf="esconDerx" >
+      <h4 class="ion-no-margin">Cotação de Trajeto</h4>
+      <span>{{distancia+"  /  "+duracao}}</span>
+
+      <ion-grid class="ion-margin-vertical">
+      <ion-row>
+        <ion-col size="4" (click)="showLoading('Standard', valorStandard)">
+          <img class="imagemCars" src="assets\cartaxi.png"/>
+          <span class="category">Standart</span>
+          <span>{{valorStandard}}</span>
+        </ion-col>
+        <ion-col size="4" (click)="showLoading('Plus', valorPlus)">
+          <img class="imagemCars" src="assets\cartaxi.png"/>
+          <span class="category">Plus</span>
+          <span>{{valorPlus}}</span>
+        </ion-col>
+        <ion-col size="4" (click)="showLoading('Encomenda', valorEncomenda)">
+          <img class="imagemCars" src="assets\encomenda.png"/>
+          <span class="category">Encomenda</span>
+          <span>{{valorEncomenda}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button routerLink="/inbox" color="dark" expand="block" size="default">NOVA BUSCA</ion-button>
+    
+
+    </div>
+
+    <div class="request-car2 ion-padding ion-text-center" *ngIf="esconDerx3" >
+      <h4 class="ion-no-margin">{{driveEncontrado.statusRota}}...</h4>
+      <span>{{driveEncontrado.acompahaDrive}}</span>
+
+      <ion-grid class="ion-margin-vertical"> 
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label>
+                <strong>Carro</strong><br>
+                {{driveEncontrado.modelCar}}
+              </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label>
+                <strong>Placa</strong><br>
+                {{driveEncontrado.PlacaCar}}
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+           <ion-col>
+            <ion-item>
+              <ion-label>
+                <strong>Total</strong><br>
+                {{valorStandard}}
+              </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img alt="Silhouette of a person's head"  src="assets\cartaxi.png"/>
+              </ion-avatar>
+              <ion-label>
+                <strong>Motorista</strong><br>
+                {{driveEncontrado.nome}}
+              </ion-label>              
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    <ion-button routerLink="/inbox" color="dark" expand="block" size="default">ENVIAR MENSAGEM</ion-button>
+    </div>
+  </ion-footer>
+
+     
+
+  <div #mapElement class="map" ></div>
+  
+  

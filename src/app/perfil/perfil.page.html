@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm"></ion-searchbar>
+  <ion-select [(ngModel)]="selectedItem">
+    <ion-select-option *ngFor="let item of filteredItems" [value]="item">{{item.name}}</ion-select-option>
+  </ion-select>
+</ion-content>

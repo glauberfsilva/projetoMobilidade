@@ -1,0 +1,8 @@
+{
+  "name": "UberAppGb",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

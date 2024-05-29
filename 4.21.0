@@ -1,0 +1,8 @@
++ browserslist@4.21.5
+added 1 package from 1 contributor, removed 1 package, updated 3 packages and audited 2282 packages in 74.795s
+
+179 packages are looking for funding
+  run `npm fund` for details
+
+found 95 vulnerabilities (11 low, 19 moderate, 49 high, 16 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details

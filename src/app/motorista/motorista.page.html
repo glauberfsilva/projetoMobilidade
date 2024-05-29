@@ -1,0 +1,19 @@
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="titulohead">Motorista</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-footer *ngIf="botaoStatus == true">
+  <ion-button expand="full" color="danger" size="large" 
+  class="botao1" #myButton (click)="statusDriver()" *ngIf="esconDer">{{statusMotorista}}</ion-button>
+</ion-footer>
+
+
+<div #mapElement class="map" ></div>
+  
+  
